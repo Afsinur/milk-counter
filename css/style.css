@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --list-width: 99vw;
+}
+
+body {
+  background: rgb(241, 238, 238);
+}
+
+button {
+  padding: 2px 5px;
+  cursor: pointer;
+}
+
+td,
+th {
+  border: 1px solid #0000006c;
+  text-align: center;
+  padding: 8px;
+}
+
+.milk_counter_app {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+/*right_bar*/
+.right_bar {
+  position: absolute;
+  height: 95vh;
+  width: 80px;
+  top: 15px;
+  right: 0;
+}
+
+.right_bar_top {
+  position: relative;
+  z-index: 1;
+}
+
+.right_bar_top button {
+  padding: 5px 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  background: royalblue;
+  color: #fffffe;
+}
+
+.right_bar_bottom {
+  position: relative;
+  background: rgb(245, 9, 100);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  transition: background 150ms ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.right_bar_bottom:hover {
+  background: rgb(180, 17, 80);
+}
+
+.right_bar_bottom > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: rgb(219, 219, 219);
+  padding: 1.5px 0px;
+  width: 50%;
+  border-radius: 5px;
+  transition: background 150ms ease-in-out;
+}
+
+.right_bar_bottom:hover > div {
+  background: rgb(255, 255, 255);
+}
+
+.right_bar_bottom > div:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.right_bar_bottom > div:nth-child(2) {
+  transform: translate(-50%, -50%);
+}
+
+/*add_data_box*/
+.add_data_box {
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100%;
+  visibility: hidden;
+}
+
+.add_data_box > div {
+  position: relative;
+  background: #fffffe;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.add_data_box > div > div:nth-child(1) {
+  margin: 5px 5px 10px 5px;
+  color: #303030;
+}
+
+.add_data_box > div > div:nth-child(2) form div {
+  margin: 10px 5px;
+  font-weight: 500;
+  color: #303030;
+}
+
+.add_data_box > div > div:nth-child(2) form div:nth-child(3) {
+  align-self: flex-end;
+}
+
+.add_data_box > div > div:nth-child(2) form div:nth-child(1) input,
+.add_data_box > div > div:nth-child(2) form div:nth-child(2) input {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  margin: 0 2px;
+}
+
+.add_data_box
+  > div
+  > div:nth-child(2)
+  form
+  div:nth-child(3)
+  > :is(button, input) {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  margin: 0 2px;
+  font-weight: 500;
+}
+
+.add_data_box
+  > div
+  > div:nth-child(2)
+  form
+  div:nth-child(3)
+  > :is(button, input):hover {
+  filter: brightness(0.9);
+}
+
+/*showListDiv*/
+.showListDiv {
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--list-width);
+  height: 78vh;
+  z-index: 0;
+  overflow-x: hidden;
+  box-shadow: 0 2px 2px rgb(0, 0, 0, 0.5);
+}
+
+.showCountsDiv {
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: var(--list-width);
+}
+
+/*updateListDiv*/
+
+.updateListDiv {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  visibility: hidden;
+}
+
+.updateInfoContainer {
+  background: #fffffe;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+#update_containID button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  margin: 0px 2px;
+  cursor: pointer;
+}
+
+.updateInfoContainer div input {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+/*style_notification*/
+.style_notification {
+  position: fixed;
+  top: 100px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.801);
+  color: #ffffff;
+  font-weight: 500;
+  padding: 10px 30px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  z-index: 4;
+}
+
+.showNotificationAnim {
+  animation: showNotification 5000ms linear 1 forwards;
+}
+
+@keyframes showNotification {
+  0% {
+    transform: translate(100%, 0%);
+    opacity: 1;
+  }
+  5% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+  75% {
+    transform: translate(0%, -95%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(0%, -100%);
+    opacity: 0;
+  }
+}
+
+/*resetBox*/
+.resetBox {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}

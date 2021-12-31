@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Milk Counter</title>
+    <link rel="stylesheet" href="css/enStyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/selectors_.js"></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <div class="w-F milk_counter_app fd-y fy-x-c fy-y-c">
+      <div class="right_bar fd-y fy-x-c fy-y-sb">
+        <div class="right_bar_top">
+          <button id="get_data">Get text</button>
+          <button id="reset_data">Reset</button>
+        </div>
+
+        <div class="right_bar_bottom">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div class="add_data_box fd-x fx-x-c fx-y-c">
+        <div class="fd-y fy-x-c fy-y-c">
+          <div>
+            <h2>Add Data</h2>
+          </div>
+
+          <div>
+            <form class="fd-y" action="/">
+              <div>
+                <input type="date" id="date" required />
+              </div>
+
+              <div>
+                <input
+                  type="text"
+                  id="milk_litre"
+                  placeholder="Milk (litre):"
+                  required
+                />
+              </div>
+
+              <div>
+                <button>Cancel</button>
+                <input type="submit" value="Add" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="showListDiv"></div>
+      <div class="showCountsDiv"></div>
+
+      <div class="updateListDiv fd-x fx-x-c fx-y-c">
+        <div class="updateInfoContainer fd-y">
+          <h2 style="margin-bottom: 10px">Update</h2>
+
+          <div>
+            <input
+              style="margin: 5px; padding: 5px"
+              type="date"
+              id="update_date"
+            />
+          </div>
+
+          <div>
+            <input
+              style="margin: 5px; padding: 5px"
+              type="text"
+              id="update_milk"
+            />
+          </div>
+
+          <div id="update_containID" style="align-self: end; margin-top: 10px">
+            <button class="cancel">Cancel</button>
+            <button class="update">Update</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="resetBox fd-x fx-x-c fx-y-c">
+        <div
+          class="fd-y"
+          style="background: #fffffe; padding: 10px 15px; border-radius: 5px"
+        >
+          <h2>Are you sure?</h2>
+          <p id="surebox"></p>
+
+          <div style="align-self: flex-end; margin-top: 20px">
+            <button id="cancel_reset">Cancel</button>
+            <button id="do_reset">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
