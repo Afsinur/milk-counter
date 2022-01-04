@@ -151,6 +151,24 @@ const delete_from_local_and_live_list = function (e2) {
   });
 };
 
+const customDate = (e) => {
+  let str = ``;
+
+  let splited = e.split("-");
+
+  for (let i = 0; i < splited.length; i++) {
+    const el = splited[i];
+
+    if (i === splited.length - 1) {
+      str += `<span class="highlight_date">${el}</span>`;
+    } else {
+      str += `${el}-`;
+    }
+  }
+
+  return str;
+};
+
 const showList = (arr) => {
   let sirial_arrTbl = arr.sort((a, b) => {
     return a.id - b.id;
@@ -168,7 +186,7 @@ const showList = (arr) => {
     tblArr.push({
       c: (elID += 1),
       data: [
-        el.date,
+        customDate(el.date),
         el.milk,
         `<button onclick="edit_local_and_live_list(${(elID -= 1)})">Edit</button>`,
         `<button onclick="delete_from_local_and_live_list(${(elID -= 1)})">Delete</button>`,

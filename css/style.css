@@ -25,6 +25,14 @@ th {
   padding: 8px;
 }
 
+.highlight_date {
+  background: #fff;
+  padding: 0.5px 1.5px;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 50%);
+  font-weight: 500;
+}
+
 .milk_counter_app {
   position: fixed;
   top: 0;
